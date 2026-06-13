@@ -314,17 +314,33 @@ img {
 
 /* Error boundary styles */
 .error-boundary {
-  @apply min-h-screen bg-[#F9F9F9] flex items-center justify-center p-4;
+  min-height: 100vh;
+  background-color: #F9F9F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .error-boundary-content {
-  @apply max-w-md w-full text-center;
+  max-width: 28rem;
+  width: 100%;
+  text-align: center;
 }
 
 /* Focus visible styles for accessibility */
 :focus-visible {
   outline: 2px solid var(--red);
   outline-offset: 2px;
+}
+
+/* Animation utilities */
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out forwards;
 }
 
 /* Smooth page transitions */

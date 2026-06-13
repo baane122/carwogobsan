@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/components/language-context";
@@ -16,10 +17,12 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <img
+              <Image
                 src="/images/logo.jpg"
                 alt="CARWO GOBSAN"
-                className="h-10 w-10 rounded-lg object-cover border border-[#E60000]/20"
+                width={40}
+                height={40}
+                className="rounded-lg object-cover border border-[#E60000]/20"
               />
               <span className="text-xl font-bold tracking-tight">
                 CARWO <span className="text-[#E60000]">GOBSAN</span>

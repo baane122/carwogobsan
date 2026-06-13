@@ -1,9 +1,31 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { getSetting } from "@/lib/insforge";
 
 export function WhatsAppFAB() {
-  const whatsappLink = "https://wa.me/252633800999";
+  const [phoneNumber, setPhoneNumber] = useState("+252633800999");
+
+  useEffect(() => {
+    async function loadWhatsAppNumber() {
+      try {
+        const setting = await getSetting("whatsapp_number");
+        const value = setting?.value;
+        if (value && typeof value === "object" && "number" in value && typeof value.number === "string") {
+          setPhoneNumber(value.number);
+        } else if (value && typeof value === "string") {
+          setPhoneNumber(value);
+        }
+      } catch (error) {
+        console.error("Error fetching WhatsApp number:", error);
+      }
+    }
+
+    loadWhatsAppNumber();
+  }, []);
+
+  const whatsappLink = `https://wa.me/${phoneNumber.replace(/^\+/, "")}`;
 
   return (
     <a

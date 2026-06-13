@@ -32,6 +32,14 @@ export default function PremiumCategoryGrid({ categories }: CategoryGridProps) {
     "phones-tablets": Smartphone,
   };
 
+  // Fallback image for categories without images
+  const fallbackCategoryImage = "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400";
+
+  // Handle empty state
+  if (!categories || categories.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F9F9F9]">
       <div className="mx-auto max-w-7xl">
@@ -61,7 +69,7 @@ export default function PremiumCategoryGrid({ categories }: CategoryGridProps) {
                 >
                   <div className="relative h-56 overflow-hidden">
                     <Image
-                      src={cat.image || "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400"}
+                      src={cat.image || fallbackCategoryImage}
                       alt={language === "so" ? cat.name_so : cat.name_en}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"

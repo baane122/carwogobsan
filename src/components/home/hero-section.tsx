@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/components/language-context";
 
@@ -48,51 +47,57 @@ export default function PremiumHero() {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  const handleImageLoad = (index: number) => {
+    // Image loaded callback for potential future use
+    void index;
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Background Images */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.05 }}
-          transition={{ duration: 1.2 }}
-          className="absolute inset-0"
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
         >
           <Image
-            src={slides[currentSlide].image}
-            alt={slides[currentSlide].title}
+            src={slide.image}
+            alt={slide.title}
             fill
             className="object-cover"
-            priority
+            priority={index === 0}
+            loading={index === 0 ? "eager" : "lazy"}
             sizes="100vw"
+            onLoad={() => handleImageLoad(index)}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#111111]/90 via-[#111111]/60 to-[#111111]/30" />
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      ))}
 
       {/* Content */}
-      <div className="relative z-10 flex items-center min-h-screen pt-20">
+      <div className="relative z-20 flex items-center min-h-screen pt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.6 }}
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-700 ${
+                  index === currentSlide
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4 absolute pointer-events-none"
+                }`}
               >
                 <span className="inline-flex items-center gap-2 rounded-full bg-[#E60000]/20 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-[#FF3333] mb-6 border border-[#E60000]/20">
                   <Sparkles className="h-4 w-4" />
-                  {slides[currentSlide].subtitle}
+                  {slide.subtitle}
                 </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight font-[family-name:var(--font-montserrat)]">
-                  {slides[currentSlide].title}
+                  {slide.title}
                 </h1>
                 <p className="mt-6 text-lg lg:text-xl text-white/70 max-w-lg leading-relaxed">
-                  {slides[currentSlide].description}
+                  {slide.description}
                 </p>
                 <div className="mt-10 flex flex-wrap gap-4">
                   <Link
@@ -109,8 +114,8 @@ export default function PremiumHero() {
                     {t.shopByCategory}
                   </Link>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -131,15 +136,11 @@ export default function PremiumHero() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 right-10 z-20 hidden lg:flex flex-col items-center gap-2"
-      >
+      <div className="absolute bottom-10 right-10 z-20 hidden lg:flex flex-col items-center gap-2 animate-bounce">
         <span className="text-xs text-white/50 tracking-widest uppercase rotate-90 origin-center translate-y-8">
           Scroll
         </span>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,26 +14,59 @@ import {
   Check,
   ArrowLeft,
   Star,
+  Loader2,
 } from "lucide-react";
 import { useLanguage } from "@/components/language-context";
 import { useCartStore } from "@/lib/store";
 import { ProductCard } from "@/components/product-card";
+import { fetchProducts, fetchSettings } from "@/lib/insforge";
 import type { Product } from "@/lib/insforge";
 
-const WHATSAPP_NUMBER = "252633800999";
+const DEFAULT_WHATSAPP_NUMBER = "252633800999";
 
 interface ProductClientProps {
   product: Product;
-  relatedProducts: Product[];
 }
 
-export default function ProductClient({ product, relatedProducts }: ProductClientProps) {
+export default function ProductClient({ product }: ProductClientProps) {
   const { language, t } = useLanguage();
   const addItem = useCartStore((state) => state.addItem);
 
   const [quantity, setQuantity] = useState(1);
   const [addedToCart, setAddedToCart] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
+  const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const [whatsappNumber, setWhatsappNumber] = useState(DEFAULT_WHATSAPP_NUMBER);
+  const [loadingRelated, setLoadingRelated] = useState(true);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Fetch related products and WhatsApp number on mount
+  useEffect(() => {
+    async function loadData() {
+      try {
+        // Fetch all products for related products
+        const allProducts = await fetchProducts();
+        const related = allProducts
+          .filter((p) => p.category_id === product.category_id && p.id !== product.id)
+          .slice(0, 4);
+        setRelatedProducts(related);
+
+        // Fetch WhatsApp number from settings
+        const settings = await fetchSettings();
+        const whatsappSetting = settings.find((s) => s.key === "whatsapp_number");
+        if (whatsappSetting && whatsappSetting.value && typeof whatsappSetting.value === "object" && "phone" in whatsappSetting.value && typeof whatsappSetting.value.phone === "string") {
+          setWhatsappNumber(whatsappSetting.value.phone.replace(/^\+/, ""));
+        } else if (whatsappSetting && typeof whatsappSetting.value === "string") {
+          setWhatsappNumber(whatsappSetting.value.replace(/^\+/, ""));
+        }
+      } catch (error) {
+        console.error("Error loading related products:", error);
+      } finally {
+        setLoadingRelated(false);
+      }
+    }
+    loadData();
+  }, [product.category_id, product.id]);
 
   const displayName = language === "so" && product.name_so ? product.name_so : product.name_en;
   const displayDescription =
@@ -43,6 +76,13 @@ export default function ProductClient({ product, relatedProducts }: ProductClien
     product.originalPrice && product.originalPrice > product.price
       ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
       : 0;
+
+  // Build images array
+  const images = product.images && product.images.length > 0
+    ? product.images
+    : product.image
+      ? [product.image]
+      : [];
 
   const handleAddToCart = () => {
     if (product.stock <= 0) return;
@@ -68,7 +108,7 @@ export default function ProductClient({ product, relatedProducts }: ProductClien
   const whatsappMessage = encodeURIComponent(
     `Hi, I want to order: ${product.name_en} x${quantity} ($${(product.price * quantity).toFixed(2)})`
   );
-  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const currentUrl = typeof window !== "undefined" ? window.location.href : "";
 
@@ -101,19 +141,52 @@ export default function ProductClient({ product, relatedProducts }: ProductClien
         </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Product Image */}
-          <div className="relative aspect-square rounded-2xl overflow-hidden bg-white">
-            <Image
-              src={product.image}
-              alt={displayName}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
-            {discount > 0 && (
-              <div className="absolute top-4 left-4 bg-[#E60000] text-white px-3 py-1 rounded-full text-sm font-bold">
-                -{discount}%
+          {/* Product Images */}
+          <div className="space-y-4">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-white">
+              {images.length > 0 ? (
+                <Image
+                  src={images[currentImageIndex]}
+                  alt={displayName}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                  <span className="text-gray-400">No image</span>
+                </div>
+              )}
+              {discount > 0 && (
+                <div className="absolute top-4 left-4 bg-[#E60000] text-white px-3 py-1 rounded-full text-sm font-bold">
+                  -{discount}%
+                </div>
+              )}
+            </div>
+
+            {/* Thumbnail Gallery */}
+            {images.length > 1 && (
+              <div className="flex gap-2 overflow-x-auto pb-2">
+                {images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
+                      currentImageIndex === index
+                        ? "border-[#E60000]"
+                        : "border-transparent hover:border-gray-300"
+                    }`}
+                  >
+                    <Image
+                      src={img}
+                      alt={`${displayName} - ${index + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
+                  </button>
+                ))}
               </div>
             )}
           </div>
@@ -343,6 +416,15 @@ export default function ProductClient({ product, relatedProducts }: ProductClien
                   inStock={p.stock > 0}
                 />
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Loading related products */}
+        {loadingRelated && (
+          <div className="border-t border-[#E5E5E5] pt-12">
+            <div className="flex items-center justify-center py-8">
+              <Loader2 className="w-8 h-8 animate-spin text-[#E60000]" />
             </div>
           </div>
         )}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import {
   ArrowLeft,
@@ -11,7 +11,6 @@ import {
   Eye,
   ShoppingCart,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import { useLanguage } from "@/components/language-context";
 import { useCartStore } from "@/lib/store";
 import { AnimatedSection } from "./animated-section";
@@ -25,8 +24,13 @@ export default function TrendingProductsCarousel({ products }: TrendingProductsP
   const { language, t } = useLanguage();
   const addItem = useCartStore((state) => state.addItem);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const trendingProducts = products.filter((p) => p.featured).slice(0, 8);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const trendingProducts = products.length > 0 ? products.filter((p) => p.featured).slice(0, 8) : [];
 
   const scrollTo = useCallback(
     (direction: "left" | "right") => {
@@ -38,6 +42,11 @@ export default function TrendingProductsCarousel({ products }: TrendingProductsP
     },
     [trendingProducts.length]
   );
+
+  // Handle empty state after hooks
+  if (trendingProducts.length === 0) {
+    return null;
+  }
 
   const getVisibleProducts = () => {
     const visible = [];
@@ -80,12 +89,12 @@ export default function TrendingProductsCarousel({ products }: TrendingProductsP
         <div className="relative overflow-hidden">
           <div className="flex gap-6 transition-transform duration-500 ease-out">
             {getVisibleProducts().map((product, idx) => (
-              <motion.div
+              <div
                 key={`${product.id}-${idx}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="w-full sm:w-1/2 lg:w-1/4 flex-shrink-0"
+                className={`w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 transition-all duration-500 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                }`}
+                style={{ transitionDelay: `${idx * 100}ms` }}
               >
                 <div className="group relative bg-[#F9F9F9] rounded-2xl overflow-hidden border border-[#E5E5E5] hover:border-[#E60000]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#E60000]/5 hover:-translate-y-1">
                   {/* Image */}
@@ -96,6 +105,7 @@ export default function TrendingProductsCarousel({ products }: TrendingProductsP
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -176,7 +186,7 @@ export default function TrendingProductsCarousel({ products }: TrendingProductsP
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

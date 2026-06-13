@@ -1,22 +1,37 @@
-import { products } from "@/lib/data";
-import { getProductById } from "@/lib/api";
+import { products as staticProducts } from "@/lib/data";
 import ProductClient from "./ProductClient";
 
 // Generate static params for all products (required for static export)
-export function generateStaticParams() {
-  return products.map((product) => ({
+// Uses only static data - no API calls during build
+export async function generateStaticParams() {
+  // Always use static data for static export to avoid build-time API failures
+  return staticProducts.map((product) => ({
     id: product.id,
   }));
 }
 
-// Server component wrapper
-export default async function ProductPage({
+// Generate static metadata for each product
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const product = staticProducts.find((p) => p.id === params.id);
+  if (!product) {
+    return {
+      title: "Product Not Found | CARWO GOBSAN",
+    };
+  }
+  return {
+    title: `${product.name_en} | CARWO GOBSAN`,
+    description: product.description_en,
+  };
+}
+
+// Server component wrapper - uses static data for static export
+export default function ProductPage({
   params,
 }: {
   params: { id: string };
 }) {
-  // Try to fetch from API first, fallback to static data
-  const product = await getProductById(params.id);
+  // Use static data for the initial render
+  const product = staticProducts.find((p) => p.id === params.id);
 
   if (!product) {
     return (
@@ -32,10 +47,5 @@ export default async function ProductPage({
     );
   }
 
-  // Related products (same category, excluding current)
-  const relatedProducts = products
-    .filter((p) => p.category_id === product.category_id && p.id !== product.id)
-    .slice(0, 4);
-
-  return <ProductClient product={product} relatedProducts={relatedProducts} />;
+  return <ProductClient product={product} />;
 }

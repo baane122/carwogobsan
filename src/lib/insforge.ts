@@ -81,7 +81,7 @@ export interface Customer {
 export interface Setting {
   id: string;
   key: string;
-  value: Record<string, unknown>;
+  value: Record<string, unknown> | string;
   created_at?: string;
   updated_at?: string;
 }
@@ -105,8 +105,9 @@ async function apiRequest<T>(
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: 'Unknown error' }));
-    throw new Error(error.message || `HTTP error! status: ${response.status}`);
+    const errorText = await response.text().catch(() => 'Unknown error');
+    console.error(`[Insforge API Error] ${endpoint}: ${response.status} - ${errorText}`);
+    throw new Error(`HTTP error! status: ${response.status}`);
   }
 
   return response.json();
@@ -184,6 +185,15 @@ export async function deleteProduct(id: string): Promise<void> {
   await apiRequest<void>(`products/${id}`, {
     method: 'DELETE',
   });
+}
+
+export async function bulkDeleteProducts(ids: string[]): Promise<void> {
+  await Promise.all(ids.map((id) => deleteProduct(id)));
+}
+
+export async function bulkCreateProducts(products: Omit<Product, 'id' | 'created_at' | 'updated_at'>[]): Promise<Product[]> {
+  const results = await Promise.all(products.map((product) => createProduct(product)));
+  return results;
 }
 
 // ===== ORDERS API =====
@@ -269,6 +279,14 @@ export async function getSetting(key: string): Promise<Setting | null> {
     console.error('Error fetching setting:', error);
     return null;
   }
+}
+
+export async function updateSetting(key: string, value: Record<string, unknown>): Promise<Setting> {
+  const data = await apiRequest<{ data: Setting }>('settings', {
+    method: 'POST',
+    body: JSON.stringify({ key, value }),
+  });
+  return data.data;
 }
 
 // ===== WHATSAPP CLICKS API =====

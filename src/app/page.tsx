@@ -1,19 +1,16 @@
 import React, { Suspense } from "react";
-import { getCategories, getFeaturedProducts } from "@/lib/api";
-import PremiumHero from "@/components/home/hero-section";
+import { products as staticProducts, categories as staticCategories } from "@/lib/data";
 import PremiumTrustBar from "@/components/home/trust-bar";
 import PremiumCategoryGrid from "@/components/home/category-grid";
-import TrendingProductsCarousel from "@/components/home/trending-products";
 import FeaturedCollectionBanner from "@/components/home/featured-banner";
 import TrustBadgesSection from "@/components/home/trust-badges";
 import StatsSection from "@/components/home/stats-section";
-import { products } from "@/lib/data";
+import { LazyHero } from "@/components/lazy-hero";
+import { LazyTrendingProducts } from "@/components/lazy-trending-products";
+import { HeroSkeleton } from "@/components/skeletons/hero-skeleton";
+import { ProductListSkeleton } from "@/components/skeletons/product-list-skeleton";
 
 // Loading fallback components
-function HeroLoading() {
-  return <div className="min-h-screen bg-[#111111] animate-pulse" />;
-}
-
 function CategoriesLoading() {
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F9F9F9]">
@@ -30,57 +27,27 @@ function CategoriesLoading() {
   );
 }
 
-function ProductsLoading() {
-  return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="mx-auto max-w-7xl">
-        <div className="h-8 w-48 bg-gray-200 rounded animate-pulse mb-12" />
-        <div className="flex gap-6">
-          {[...Array(4)].map((_, i) => (
-            <div key={i} className="w-full sm:w-1/2 lg:w-1/4 h-80 bg-gray-200 rounded-2xl animate-pulse" />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Fetch data on the server
-async function getHomeData() {
-  try {
-    const [categories, featuredProducts] = await Promise.all([
-      getCategories(),
-      getFeaturedProducts(),
-    ]);
-
-    return { categories, featuredProducts };
-  } catch (error) {
-    console.error("[Home] Failed to fetch data:", error);
-    // Fallback to static data
-    return {
-      categories: [],
-      featuredProducts: products.filter((p) => p.featured),
-    };
-  }
-}
-
-export default async function HomePage() {
-  const { categories, featuredProducts } = await getHomeData();
+// For static export, we use static data directly at build time
+// This ensures the page renders without API calls during build
+export default function HomePage() {
+  // Use static data directly for static export
+  const displayCategories = staticCategories;
+  const displayFeaturedProducts = staticProducts.filter((p) => p.featured);
 
   return (
     <main className="flex-1">
-      <Suspense fallback={<HeroLoading />}>
-        <PremiumHero />
+      <Suspense fallback={<HeroSkeleton />}>
+        <LazyHero />
       </Suspense>
 
       <PremiumTrustBar />
 
       <Suspense fallback={<CategoriesLoading />}>
-        <PremiumCategoryGrid categories={categories} />
+        <PremiumCategoryGrid categories={displayCategories} />
       </Suspense>
 
-      <Suspense fallback={<ProductsLoading />}>
-        <TrendingProductsCarousel products={featuredProducts} />
+      <Suspense fallback={<ProductListSkeleton count={4} columns={4} />}>
+        <LazyTrendingProducts products={displayFeaturedProducts} />
       </Suspense>
 
       <FeaturedCollectionBanner />

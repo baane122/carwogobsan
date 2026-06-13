@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { motion } from "framer-motion";
 import { AlertTriangle, RefreshCw, Home } from "lucide-react";
 import Link from "next/link";
 
@@ -59,12 +58,7 @@ export default function GlobalError({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-screen bg-[#F9F9F9] flex items-center justify-center p-4 font-sans">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-md w-full text-center"
-        >
+        <div className="max-w-md w-full text-center animate-fadeIn">
           {/* Error Icon */}
           <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[#E60000]/10">
             <AlertTriangle className="h-12 w-12 text-[#E60000]" />
@@ -114,7 +108,7 @@ export default function GlobalError({
               Premium E-Commerce in Hargeisa
             </p>
           </div>
-        </motion.div>
+        </div>
       </body>
     </html>
   );
