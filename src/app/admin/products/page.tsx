@@ -37,6 +37,7 @@ import {
   fetchCategories,
   Category,
 } from "@/lib/insforge";
+import { categories as staticCategories } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 interface ProductFormData {
@@ -284,9 +285,14 @@ export default function AdminProductsPage() {
   const loadCategories = async () => {
     try {
       const data = await withRetry(() => fetchCategories());
-      setCategories(data);
+      // Fallback to static categories if API returns empty
+      if (data && data.length > 0) {
+        setCategories(data);
+      } else {
+        setCategories(staticCategories);
+      }
     } catch {
-      // Silently fail for categories
+      setCategories(staticCategories);
     }
   };
 
