@@ -1,0 +1,1754 @@
+{
+  "timestamp": "2026-06-14T09:11:21.853Z",
+  "summary": {
+    "totalImages": 60,
+    "errors": 0,
+    "totalOriginal": 79564667,
+    "totalCompressed": 15323418,
+    "totalWebp": 2616570,
+    "pngSavings": 64241249,
+    "webpSavings": 76948097
+  },
+  "results": [
+    {
+      "file": "cookware/carbon-steel-wok.png",
+      "originalSize": 1418086,
+      "compressedSize": 303043,
+      "webpSize": 52366,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9775,
+          "webp": 2794,
+          "width": 200
+        },
+        "small": {
+          "png": 37826,
+          "webp": 7726,
+          "width": 400
+        },
+        "medium": {
+          "png": 89471,
+          "webp": 17526,
+          "width": 600
+        },
+        "large": {
+          "png": 164109,
+          "webp": 32356,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/cast-iron-skillet.png",
+      "originalSize": 1596330,
+      "compressedSize": 438782,
+      "webpSize": 82782,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 13519,
+          "webp": 3788,
+          "width": 200
+        },
+        "small": {
+          "png": 52440,
+          "webp": 11764,
+          "width": 400
+        },
+        "medium": {
+          "png": 120049,
+          "webp": 27630,
+          "width": 600
+        },
+        "large": {
+          "png": 230764,
+          "webp": 49524,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/enameled-dutch-oven.png",
+      "originalSize": 1341995,
+      "compressedSize": 283020,
+      "webpSize": 45908,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 10272,
+          "webp": 2622,
+          "width": 200
+        },
+        "small": {
+          "png": 36499,
+          "webp": 7468,
+          "width": 400
+        },
+        "medium": {
+          "png": 77920,
+          "webp": 15942,
+          "width": 600
+        },
+        "large": {
+          "png": 143012,
+          "webp": 28078,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/grill-pan.png",
+      "originalSize": 1794679,
+      "compressedSize": 435712,
+      "webpSize": 173776,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 12738,
+          "webp": 5178,
+          "width": 200
+        },
+        "small": {
+          "png": 56560,
+          "webp": 22326,
+          "width": 400
+        },
+        "medium": {
+          "png": 137920,
+          "webp": 56658,
+          "width": 600
+        },
+        "large": {
+          "png": 268092,
+          "webp": 105256,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/non-stick-frying-pan.png",
+      "originalSize": 1220776,
+      "compressedSize": 182625,
+      "webpSize": 30136,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 6590,
+          "webp": 1910,
+          "width": 200
+        },
+        "small": {
+          "png": 25870,
+          "webp": 4640,
+          "width": 400
+        },
+        "medium": {
+          "png": 53147,
+          "webp": 9252,
+          "width": 600
+        },
+        "large": {
+          "png": 107005,
+          "webp": 17404,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/pressure-cooker.png",
+      "originalSize": 1276648,
+      "compressedSize": 193922,
+      "webpSize": 41234,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8822,
+          "webp": 2582,
+          "width": 200
+        },
+        "small": {
+          "png": 28635,
+          "webp": 7262,
+          "width": 400
+        },
+        "medium": {
+          "png": 64086,
+          "webp": 14830,
+          "width": 600
+        },
+        "large": {
+          "png": 112121,
+          "webp": 25632,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/saucepan-set.png",
+      "originalSize": 1390268,
+      "compressedSize": 307540,
+      "webpSize": 47428,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 11385,
+          "webp": 3228,
+          "width": 200
+        },
+        "small": {
+          "png": 41947,
+          "webp": 8894,
+          "width": 400
+        },
+        "medium": {
+          "png": 91968,
+          "webp": 18422,
+          "width": 600
+        },
+        "large": {
+          "png": 167771,
+          "webp": 31122,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/stainless-steel-saucepan.png",
+      "originalSize": 1535302,
+      "compressedSize": 426921,
+      "webpSize": 55500,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 13723,
+          "webp": 4428,
+          "width": 200
+        },
+        "small": {
+          "png": 47632,
+          "webp": 10926,
+          "width": 400
+        },
+        "medium": {
+          "png": 116021,
+          "webp": 21410,
+          "width": 600
+        },
+        "large": {
+          "png": 209935,
+          "webp": 35820,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/steamer-pot.png",
+      "originalSize": 1565375,
+      "compressedSize": 439368,
+      "webpSize": 64020,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 16015,
+          "webp": 4610,
+          "width": 200
+        },
+        "small": {
+          "png": 58557,
+          "webp": 12508,
+          "width": 400
+        },
+        "medium": {
+          "png": 135837,
+          "webp": 24836,
+          "width": 600
+        },
+        "large": {
+          "png": 241918,
+          "webp": 42300,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "cookware/stock-pot.png",
+      "originalSize": 1161303,
+      "compressedSize": 208074,
+      "webpSize": 33236,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8778,
+          "webp": 3012,
+          "width": 200
+        },
+        "small": {
+          "png": 29546,
+          "webp": 7476,
+          "width": 400
+        },
+        "medium": {
+          "png": 62651,
+          "webp": 13186,
+          "width": 600
+        },
+        "large": {
+          "png": 109549,
+          "webp": 20520,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/bluetooth-speaker.png",
+      "originalSize": 1442117,
+      "compressedSize": 284563,
+      "webpSize": 65948,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 10062,
+          "webp": 3352,
+          "width": 200
+        },
+        "small": {
+          "png": 42106,
+          "webp": 13314,
+          "width": 400
+        },
+        "medium": {
+          "png": 92614,
+          "webp": 27816,
+          "width": 600
+        },
+        "large": {
+          "png": 172314,
+          "webp": 45438,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/digital-camera.png",
+      "originalSize": 1382854,
+      "compressedSize": 226236,
+      "webpSize": 49358,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9685,
+          "webp": 3416,
+          "width": 200
+        },
+        "small": {
+          "png": 33868,
+          "webp": 9988,
+          "width": 400
+        },
+        "medium": {
+          "png": 77792,
+          "webp": 20048,
+          "width": 600
+        },
+        "large": {
+          "png": 138914,
+          "webp": 32534,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/gaming-console.png",
+      "originalSize": 1361430,
+      "compressedSize": 205042,
+      "webpSize": 27274,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7404,
+          "webp": 1716,
+          "width": 200
+        },
+        "small": {
+          "png": 27701,
+          "webp": 4026,
+          "width": 400
+        },
+        "medium": {
+          "png": 63096,
+          "webp": 7342,
+          "width": 600
+        },
+        "large": {
+          "png": 127785,
+          "webp": 13830,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/led-desk-lamp.png",
+      "originalSize": 1116825,
+      "compressedSize": 164918,
+      "webpSize": 18628,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 5116,
+          "webp": 1410,
+          "width": 200
+        },
+        "small": {
+          "png": 20961,
+          "webp": 3456,
+          "width": 400
+        },
+        "medium": {
+          "png": 44136,
+          "webp": 6310,
+          "width": 600
+        },
+        "large": {
+          "png": 83814,
+          "webp": 10948,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/portable-charger.png",
+      "originalSize": 1076803,
+      "compressedSize": 126006,
+      "webpSize": 13844,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 5248,
+          "webp": 1074,
+          "width": 200
+        },
+        "small": {
+          "png": 18661,
+          "webp": 2412,
+          "width": 400
+        },
+        "medium": {
+          "png": 41901,
+          "webp": 4376,
+          "width": 600
+        },
+        "large": {
+          "png": 71003,
+          "webp": 7726,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/smart-tv.png",
+      "originalSize": 1236413,
+      "compressedSize": 227050,
+      "webpSize": 21110,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7978,
+          "webp": 1930,
+          "width": 200
+        },
+        "small": {
+          "png": 27716,
+          "webp": 4442,
+          "width": 400
+        },
+        "medium": {
+          "png": 74587,
+          "webp": 7892,
+          "width": 600
+        },
+        "large": {
+          "png": 135782,
+          "webp": 12598,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/smartwatch.png",
+      "originalSize": 1292884,
+      "compressedSize": 270553,
+      "webpSize": 42888,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 10230,
+          "webp": 4068,
+          "width": 200
+        },
+        "small": {
+          "png": 37284,
+          "webp": 10404,
+          "width": 400
+        },
+        "medium": {
+          "png": 81620,
+          "webp": 18164,
+          "width": 600
+        },
+        "large": {
+          "png": 155307,
+          "webp": 27880,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/soundbar.png",
+      "originalSize": 1175266,
+      "compressedSize": 212573,
+      "webpSize": 44242,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7471,
+          "webp": 2214,
+          "width": 200
+        },
+        "small": {
+          "png": 25715,
+          "webp": 5338,
+          "width": 400
+        },
+        "medium": {
+          "png": 57486,
+          "webp": 11562,
+          "width": 600
+        },
+        "large": {
+          "png": 109471,
+          "webp": 24300,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/streaming-device.png",
+      "originalSize": 1192551,
+      "compressedSize": 136705,
+      "webpSize": 23560,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 5420,
+          "webp": 1592,
+          "width": 200
+        },
+        "small": {
+          "png": 20801,
+          "webp": 4206,
+          "width": 400
+        },
+        "medium": {
+          "png": 47080,
+          "webp": 8040,
+          "width": 600
+        },
+        "large": {
+          "png": 77095,
+          "webp": 13812,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "electronics/wireless-headphones.png",
+      "originalSize": 1287336,
+      "compressedSize": 206937,
+      "webpSize": 32710,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8218,
+          "webp": 3018,
+          "width": 200
+        },
+        "small": {
+          "png": 28510,
+          "webp": 7220,
+          "width": 400
+        },
+        "medium": {
+          "png": 65827,
+          "webp": 12536,
+          "width": 600
+        },
+        "large": {
+          "png": 119212,
+          "webp": 20408,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/air-conditioner.png",
+      "originalSize": 1102894,
+      "compressedSize": 149233,
+      "webpSize": 23194,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 5684,
+          "webp": 1514,
+          "width": 200
+        },
+        "small": {
+          "png": 18896,
+          "webp": 3702,
+          "width": 400
+        },
+        "medium": {
+          "png": 41830,
+          "webp": 6380,
+          "width": 600
+        },
+        "large": {
+          "png": 80828,
+          "webp": 11220,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/ceiling-fan.png",
+      "originalSize": 1072428,
+      "compressedSize": 105852,
+      "webpSize": 14960,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 4794,
+          "webp": 1132,
+          "width": 200
+        },
+        "small": {
+          "png": 14436,
+          "webp": 2558,
+          "width": 400
+        },
+        "medium": {
+          "png": 32925,
+          "webp": 4398,
+          "width": 600
+        },
+        "large": {
+          "png": 63300,
+          "webp": 7654,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/dishwasher.png",
+      "originalSize": 1109143,
+      "compressedSize": 120970,
+      "webpSize": 17346,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 4803,
+          "webp": 1206,
+          "width": 200
+        },
+        "small": {
+          "png": 16777,
+          "webp": 2844,
+          "width": 400
+        },
+        "medium": {
+          "png": 36003,
+          "webp": 5266,
+          "width": 600
+        },
+        "large": {
+          "png": 69115,
+          "webp": 8928,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/microwave-oven.png",
+      "originalSize": 1371194,
+      "compressedSize": 259457,
+      "webpSize": 37834,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8786,
+          "webp": 2570,
+          "width": 200
+        },
+        "small": {
+          "png": 29701,
+          "webp": 6814,
+          "width": 400
+        },
+        "medium": {
+          "png": 81128,
+          "webp": 12878,
+          "width": 600
+        },
+        "large": {
+          "png": 131320,
+          "webp": 22948,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/refrigerator.png",
+      "originalSize": 1230110,
+      "compressedSize": 344998,
+      "webpSize": 28446,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 12683,
+          "webp": 2912,
+          "width": 200
+        },
+        "small": {
+          "png": 43016,
+          "webp": 7256,
+          "width": 400
+        },
+        "medium": {
+          "png": 93640,
+          "webp": 12462,
+          "width": 600
+        },
+        "large": {
+          "png": 180627,
+          "webp": 18750,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/steam-iron.png",
+      "originalSize": 1303727,
+      "compressedSize": 242132,
+      "webpSize": 45680,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 11079,
+          "webp": 3896,
+          "width": 200
+        },
+        "small": {
+          "png": 35493,
+          "webp": 10312,
+          "width": 400
+        },
+        "medium": {
+          "png": 75007,
+          "webp": 18690,
+          "width": 600
+        },
+        "large": {
+          "png": 138444,
+          "webp": 29272,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/vacuum-cleaner.png",
+      "originalSize": 1392630,
+      "compressedSize": 309049,
+      "webpSize": 26754,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7412,
+          "webp": 2006,
+          "width": 200
+        },
+        "small": {
+          "png": 27862,
+          "webp": 5286,
+          "width": 400
+        },
+        "medium": {
+          "png": 68485,
+          "webp": 10254,
+          "width": 600
+        },
+        "large": {
+          "png": 133277,
+          "webp": 17212,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/washing-machine.png",
+      "originalSize": 1250113,
+      "compressedSize": 177045,
+      "webpSize": 28164,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7589,
+          "webp": 1910,
+          "width": 200
+        },
+        "small": {
+          "png": 24036,
+          "webp": 5600,
+          "width": 400
+        },
+        "medium": {
+          "png": 54619,
+          "webp": 10356,
+          "width": 600
+        },
+        "large": {
+          "png": 103622,
+          "webp": 17444,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/water-dispenser.png",
+      "originalSize": 1223715,
+      "compressedSize": 165259,
+      "webpSize": 34360,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7349,
+          "webp": 2162,
+          "width": 200
+        },
+        "small": {
+          "png": 27592,
+          "webp": 5786,
+          "width": 400
+        },
+        "medium": {
+          "png": 65257,
+          "webp": 11294,
+          "width": 600
+        },
+        "large": {
+          "png": 106864,
+          "webp": 20004,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "home-appliances/water-heater.png",
+      "originalSize": 1249086,
+      "compressedSize": 177541,
+      "webpSize": 17052,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 6190,
+          "webp": 1002,
+          "width": 200
+        },
+        "small": {
+          "png": 22176,
+          "webp": 2470,
+          "width": 400
+        },
+        "medium": {
+          "png": 53069,
+          "webp": 4698,
+          "width": 600
+        },
+        "large": {
+          "png": 104326,
+          "webp": 8600,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/bluetooth-keyboard.png",
+      "originalSize": 1490154,
+      "compressedSize": 312823,
+      "webpSize": 56812,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 11835,
+          "webp": 4750,
+          "width": 200
+        },
+        "small": {
+          "png": 39683,
+          "webp": 15294,
+          "width": 400
+        },
+        "medium": {
+          "png": 93388,
+          "webp": 27442,
+          "width": 600
+        },
+        "large": {
+          "png": 161728,
+          "webp": 40036,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/car-phone-holder.png",
+      "originalSize": 1031237,
+      "compressedSize": 176721,
+      "webpSize": 35974,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8135,
+          "webp": 2850,
+          "width": 200
+        },
+        "small": {
+          "png": 28477,
+          "webp": 8162,
+          "width": 400
+        },
+        "medium": {
+          "png": 59175,
+          "webp": 15016,
+          "width": 600
+        },
+        "large": {
+          "png": 101919,
+          "webp": 23480,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/phone-case.png",
+      "originalSize": 1576197,
+      "compressedSize": 248301,
+      "webpSize": 103708,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 6767,
+          "webp": 1484,
+          "width": 200
+        },
+        "small": {
+          "png": 29829,
+          "webp": 8056,
+          "width": 400
+        },
+        "medium": {
+          "png": 75693,
+          "webp": 28378,
+          "width": 600
+        },
+        "large": {
+          "png": 149023,
+          "webp": 60824,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/phone-charger.png",
+      "originalSize": 1207098,
+      "compressedSize": 170494,
+      "webpSize": 32322,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9801,
+          "webp": 3738,
+          "width": 200
+        },
+        "small": {
+          "png": 28208,
+          "webp": 8830,
+          "width": 400
+        },
+        "medium": {
+          "png": 60298,
+          "webp": 14754,
+          "width": 600
+        },
+        "large": {
+          "png": 111505,
+          "webp": 21580,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/power-bank.png",
+      "originalSize": 1152352,
+      "compressedSize": 157158,
+      "webpSize": 21260,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 6583,
+          "webp": 1806,
+          "width": 200
+        },
+        "small": {
+          "png": 22574,
+          "webp": 4182,
+          "width": 400
+        },
+        "medium": {
+          "png": 52059,
+          "webp": 7244,
+          "width": 600
+        },
+        "large": {
+          "png": 89378,
+          "webp": 11006,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/screen-protector.png",
+      "originalSize": 1314108,
+      "compressedSize": 234503,
+      "webpSize": 23728,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7076,
+          "webp": 1866,
+          "width": 200
+        },
+        "small": {
+          "png": 25459,
+          "webp": 4604,
+          "width": 400
+        },
+        "medium": {
+          "png": 60178,
+          "webp": 8454,
+          "width": 600
+        },
+        "large": {
+          "png": 114524,
+          "webp": 14238,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/smartphone.png",
+      "originalSize": 1371898,
+      "compressedSize": 265788,
+      "webpSize": 29496,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7333,
+          "webp": 1878,
+          "width": 200
+        },
+        "small": {
+          "png": 30258,
+          "webp": 4626,
+          "width": 400
+        },
+        "medium": {
+          "png": 65716,
+          "webp": 9496,
+          "width": 600
+        },
+        "large": {
+          "png": 119274,
+          "webp": 17482,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/tablet-stand.png",
+      "originalSize": 1626395,
+      "compressedSize": 342311,
+      "webpSize": 106602,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 11162,
+          "webp": 3170,
+          "width": 200
+        },
+        "small": {
+          "png": 48427,
+          "webp": 13170,
+          "width": 400
+        },
+        "medium": {
+          "png": 110507,
+          "webp": 35360,
+          "width": 600
+        },
+        "large": {
+          "png": 215300,
+          "webp": 66972,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/tablet.png",
+      "originalSize": 1079658,
+      "compressedSize": 157879,
+      "webpSize": 16458,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 6189,
+          "webp": 1306,
+          "width": 200
+        },
+        "small": {
+          "png": 21883,
+          "webp": 3336,
+          "width": 400
+        },
+        "medium": {
+          "png": 47983,
+          "webp": 5534,
+          "width": 600
+        },
+        "large": {
+          "png": 79609,
+          "webp": 8410,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "phones-tablets/wireless-earbuds.png",
+      "originalSize": 1391145,
+      "compressedSize": 285890,
+      "webpSize": 29522,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8318,
+          "webp": 2626,
+          "width": 200
+        },
+        "small": {
+          "png": 33994,
+          "webp": 6362,
+          "width": 400
+        },
+        "medium": {
+          "png": 81202,
+          "webp": 11168,
+          "width": 600
+        },
+        "large": {
+          "png": 154708,
+          "webp": 18264,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/air-fryer.png",
+      "originalSize": 1189206,
+      "compressedSize": 177861,
+      "webpSize": 22714,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7822,
+          "webp": 2336,
+          "width": 200
+        },
+        "small": {
+          "png": 24015,
+          "webp": 5864,
+          "width": 400
+        },
+        "medium": {
+          "png": 52538,
+          "webp": 9690,
+          "width": 600
+        },
+        "large": {
+          "png": 98443,
+          "webp": 14686,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/centrifugal-juicer.png",
+      "originalSize": 1412093,
+      "compressedSize": 449264,
+      "webpSize": 57226,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 15456,
+          "webp": 3762,
+          "width": 200
+        },
+        "small": {
+          "png": 58996,
+          "webp": 11136,
+          "width": 400
+        },
+        "medium": {
+          "png": 130707,
+          "webp": 21960,
+          "width": 600
+        },
+        "large": {
+          "png": 216003,
+          "webp": 36774,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/electric-kettle.png",
+      "originalSize": 1159082,
+      "compressedSize": 185006,
+      "webpSize": 28078,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7773,
+          "webp": 2186,
+          "width": 200
+        },
+        "small": {
+          "png": 24797,
+          "webp": 5340,
+          "width": 400
+        },
+        "medium": {
+          "png": 58486,
+          "webp": 9370,
+          "width": 600
+        },
+        "large": {
+          "png": 110030,
+          "webp": 15506,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/espresso-machine.png",
+      "originalSize": 1347303,
+      "compressedSize": 217098,
+      "webpSize": 36836,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 7823,
+          "webp": 2580,
+          "width": 200
+        },
+        "small": {
+          "png": 27242,
+          "webp": 7228,
+          "width": 400
+        },
+        "medium": {
+          "png": 65138,
+          "webp": 13424,
+          "width": 600
+        },
+        "large": {
+          "png": 124459,
+          "webp": 23070,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/food-processor.png",
+      "originalSize": 1300030,
+      "compressedSize": 234809,
+      "webpSize": 32970,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8939,
+          "webp": 2780,
+          "width": 200
+        },
+        "small": {
+          "png": 29695,
+          "webp": 6848,
+          "width": 400
+        },
+        "medium": {
+          "png": 68908,
+          "webp": 12688,
+          "width": 600
+        },
+        "large": {
+          "png": 129641,
+          "webp": 20124,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/high-speed-blender.png",
+      "originalSize": 1266126,
+      "compressedSize": 241416,
+      "webpSize": 35744,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9652,
+          "webp": 2862,
+          "width": 200
+        },
+        "small": {
+          "png": 31879,
+          "webp": 7982,
+          "width": 400
+        },
+        "medium": {
+          "png": 69376,
+          "webp": 15052,
+          "width": 600
+        },
+        "large": {
+          "png": 117054,
+          "webp": 23692,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/retro-toaster.png",
+      "originalSize": 1360569,
+      "compressedSize": 306126,
+      "webpSize": 45602,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 12335,
+          "webp": 4032,
+          "width": 200
+        },
+        "small": {
+          "png": 41736,
+          "webp": 10528,
+          "width": 400
+        },
+        "medium": {
+          "png": 93663,
+          "webp": 19314,
+          "width": 600
+        },
+        "large": {
+          "png": 176846,
+          "webp": 30720,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/rice-cooker.png",
+      "originalSize": 1242068,
+      "compressedSize": 267679,
+      "webpSize": 38696,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 11736,
+          "webp": 3394,
+          "width": 200
+        },
+        "small": {
+          "png": 38498,
+          "webp": 8152,
+          "width": 400
+        },
+        "medium": {
+          "png": 85182,
+          "webp": 14726,
+          "width": 600
+        },
+        "large": {
+          "png": 144172,
+          "webp": 23318,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/slow-cooker.png",
+      "originalSize": 1314310,
+      "compressedSize": 261788,
+      "webpSize": 41366,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 11482,
+          "webp": 3670,
+          "width": 200
+        },
+        "small": {
+          "png": 40413,
+          "webp": 9446,
+          "width": 400
+        },
+        "medium": {
+          "png": 89233,
+          "webp": 17250,
+          "width": 600
+        },
+        "large": {
+          "png": 153013,
+          "webp": 26894,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "small-appliances/stand-mixer.png",
+      "originalSize": 1316706,
+      "compressedSize": 261835,
+      "webpSize": 29912,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9277,
+          "webp": 2728,
+          "width": 200
+        },
+        "small": {
+          "png": 32023,
+          "webp": 7084,
+          "width": 400
+        },
+        "medium": {
+          "png": 73936,
+          "webp": 11914,
+          "width": 600
+        },
+        "large": {
+          "png": 142277,
+          "webp": 19014,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/ceramic-bowls-set.png",
+      "originalSize": 1464118,
+      "compressedSize": 272051,
+      "webpSize": 63666,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9482,
+          "webp": 3216,
+          "width": 200
+        },
+        "small": {
+          "png": 35381,
+          "webp": 9658,
+          "width": 400
+        },
+        "medium": {
+          "png": 82549,
+          "webp": 21914,
+          "width": 600
+        },
+        "large": {
+          "png": 146027,
+          "webp": 38722,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/coffee-mugs-set.png",
+      "originalSize": 1346938,
+      "compressedSize": 310419,
+      "webpSize": 40416,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 12734,
+          "webp": 3754,
+          "width": 200
+        },
+        "small": {
+          "png": 42731,
+          "webp": 9338,
+          "width": 400
+        },
+        "medium": {
+          "png": 93229,
+          "webp": 16740,
+          "width": 600
+        },
+        "large": {
+          "png": 160949,
+          "webp": 26562,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/cutlery-set.png",
+      "originalSize": 1263312,
+      "compressedSize": 240817,
+      "webpSize": 30628,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9655,
+          "webp": 3202,
+          "width": 200
+        },
+        "small": {
+          "png": 35407,
+          "webp": 7836,
+          "width": 400
+        },
+        "medium": {
+          "png": 76067,
+          "webp": 13610,
+          "width": 600
+        },
+        "large": {
+          "png": 121070,
+          "webp": 20590,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/dessert-plates.png",
+      "originalSize": 1589441,
+      "compressedSize": 318745,
+      "webpSize": 92594,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 10962,
+          "webp": 3564,
+          "width": 200
+        },
+        "small": {
+          "png": 40966,
+          "webp": 13614,
+          "width": 400
+        },
+        "medium": {
+          "png": 101539,
+          "webp": 33524,
+          "width": 600
+        },
+        "large": {
+          "png": 181395,
+          "webp": 58822,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/dinner-plate-set.png",
+      "originalSize": 1447629,
+      "compressedSize": 299386,
+      "webpSize": 41420,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 9411,
+          "webp": 2990,
+          "width": 200
+        },
+        "small": {
+          "png": 35082,
+          "webp": 8144,
+          "width": 400
+        },
+        "medium": {
+          "png": 89060,
+          "webp": 16150,
+          "width": 600
+        },
+        "large": {
+          "png": 159839,
+          "webp": 26960,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/glass-tumblers.png",
+      "originalSize": 1319366,
+      "compressedSize": 309718,
+      "webpSize": 49340,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 13446,
+          "webp": 4134,
+          "width": 200
+        },
+        "small": {
+          "png": 46518,
+          "webp": 10928,
+          "width": 400
+        },
+        "medium": {
+          "png": 112020,
+          "webp": 20394,
+          "width": 600
+        },
+        "large": {
+          "png": 173512,
+          "webp": 32228,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/salad-bowl.png",
+      "originalSize": 1426215,
+      "compressedSize": 358814,
+      "webpSize": 45844,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 8424,
+          "webp": 1652,
+          "width": 200
+        },
+        "small": {
+          "png": 33034,
+          "webp": 5756,
+          "width": 400
+        },
+        "medium": {
+          "png": 105764,
+          "webp": 15188,
+          "width": 600
+        },
+        "large": {
+          "png": 187197,
+          "webp": 27846,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/serving-platter.png",
+      "originalSize": 1557252,
+      "compressedSize": 309465,
+      "webpSize": 79918,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 10482,
+          "webp": 3338,
+          "width": 200
+        },
+        "small": {
+          "png": 39236,
+          "webp": 12614,
+          "width": 400
+        },
+        "medium": {
+          "png": 95958,
+          "webp": 29118,
+          "width": 600
+        },
+        "large": {
+          "png": 166062,
+          "webp": 51738,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/teapot-set.png",
+      "originalSize": 1304016,
+      "compressedSize": 283550,
+      "webpSize": 42280,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 12094,
+          "webp": 3644,
+          "width": 200
+        },
+        "small": {
+          "png": 42436,
+          "webp": 9364,
+          "width": 400
+        },
+        "medium": {
+          "png": 87152,
+          "webp": 17348,
+          "width": 600
+        },
+        "large": {
+          "png": 175127,
+          "webp": 27208,
+          "width": 800
+        }
+      },
+      "error": null
+    },
+    {
+      "file": "tableware/wine-glasses-set.png",
+      "originalSize": 1528364,
+      "compressedSize": 334577,
+      "webpSize": 65700,
+      "responsiveSizes": {
+        "thumbnail": {
+          "png": 13924,
+          "webp": 5318,
+          "width": 200
+        },
+        "small": {
+          "png": 46142,
+          "webp": 15100,
+          "width": 400
+        },
+        "medium": {
+          "png": 110021,
+          "webp": 28444,
+          "width": 600
+        },
+        "large": {
+          "png": 193105,
+          "webp": 45354,
+          "width": 800
+        }
+      },
+      "error": null
+    }
+  ]
+}

@@ -287,6 +287,22 @@ img {
   content-visibility: auto;
 }
 
+/* Responsive image handling */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Touch-friendly tap targets on mobile */
+@media (max-width: 768px) {
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 /* Prevent layout shift for images */
 .image-aspect-square {
   aspect-ratio: 1 / 1;

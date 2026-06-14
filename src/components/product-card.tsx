@@ -75,9 +75,10 @@ export function ProductCard({
             className={`object-cover transition-transform duration-500 ${
               isHovered ? "scale-110" : "scale-100"
             } ${imageLoaded ? "opacity-100" : "opacity-0"}`}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             loading="lazy"
             onLoad={() => setImageLoaded(true)}
+            unoptimized
           />
           {originalPrice && (
             <span className="absolute top-3 left-3 rounded-full bg-[#E60000] px-2.5 py-1 text-xs font-bold text-white z-20">

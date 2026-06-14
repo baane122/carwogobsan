@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     description: "Premium E-Commerce in Hargeisa",
     type: "website",
   },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  themeColor: "#E60000",
 };
 
 export default function RootLayout({
