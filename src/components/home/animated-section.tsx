@@ -95,7 +95,7 @@ export function StaggerItem({
   index?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(true); // Default to visible to prevent hidden state
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -105,7 +105,7 @@ export function StaggerItem({
           observer.disconnect();
         }
       },
-      { rootMargin: "-50px" }
+      { rootMargin: "-50px", threshold: 0 }
     );
 
     if (ref.current) {
