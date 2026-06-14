@@ -6,6 +6,7 @@ import { ProductCard } from "@/components/product-card";
 import { ProductListSkeleton } from "@/components/skeletons/product-list-skeleton";
 import { Filter } from "lucide-react";
 import { fetchProducts, fetchProductsByCategory, fetchCategories } from "@/lib/insforge";
+import { products as staticProducts, categories as staticCategories } from "@/lib/data";
 import type { Product, Category } from "@/lib/insforge";
 
 export default function ProductsPage() {
@@ -28,10 +29,13 @@ export default function ProductsPage() {
           fetchProducts(),
           fetchCategories(),
         ]);
-        setProducts(productsData.filter(p => p.active !== false));
-        setCategories(categoriesData);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to load products");
+        // Use static data as fallback if API returns empty
+        setProducts(productsData.length > 0 ? productsData.filter(p => p.active !== false) : staticProducts);
+        setCategories(categoriesData.length > 0 ? categoriesData : staticCategories);
+      } catch {
+        // On error, use static data
+        setProducts(staticProducts);
+        setCategories(staticCategories);
       } finally {
         setLoading(false);
       }
@@ -44,10 +48,10 @@ export default function ProductsPage() {
     async function loadCategoryProducts() {
       if (selectedCategory === "all") {
         const allProducts = await fetchProducts();
-        setProducts(allProducts.filter(p => p.active !== false));
+        setProducts(allProducts.length > 0 ? allProducts.filter(p => p.active !== false) : staticProducts);
       } else {
         const categoryProducts = await fetchProductsByCategory(selectedCategory);
-        setProducts(categoryProducts.filter(p => p.active !== false));
+        setProducts(categoryProducts.length > 0 ? categoryProducts.filter(p => p.active !== false) : staticProducts.filter(p => p.category_id === selectedCategory));
       }
     }
     if (!loading) {
