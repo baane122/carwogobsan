@@ -37,7 +37,7 @@ import {
   fetchCategories,
   Category,
 } from "@/lib/insforge";
-import { categories as staticCategories } from "@/lib/data";
+import { categories as staticCategories, products as staticProducts } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 interface ProductFormData {
@@ -271,12 +271,15 @@ export default function AdminProductsPage() {
     setLoadError(null);
     try {
       const data = await withRetry(() => fetchProducts());
-      setProducts(data);
+      // Use static products if API returns empty
+      setProducts(data.length > 0 ? data : staticProducts);
       setCurrentPage(1);
     } catch (error) {
       const msg = error instanceof Error ? error.message : "Failed to load products";
       setLoadError(msg);
-      showToast("error", "Failed to load products");
+      // Fallback to static products on error
+      setProducts(staticProducts);
+      showToast("error", "Failed to load products - showing static data");
     } finally {
       setLoading(false);
     }
