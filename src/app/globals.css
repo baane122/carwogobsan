@@ -236,6 +236,20 @@
   }
 }
 
+/* WhatsApp Checkout Modal Shimmer */
+@keyframes shimmerSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmerSlide 2s linear infinite;
+}
+
 /* Scroll-triggered animations */
 .scroll-animate {
   opacity: 0;
