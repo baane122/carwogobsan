@@ -10,14 +10,22 @@ import { useCartStore } from "@/lib/store";
 import { WhatsAppCheckoutModal } from "@/components/whatsapp-checkout-modal";
 
 const hargeisaDistricts = [
-  { id: "new-hargeisa", label: "New Hargeisa", deliveryFee: 3 },
-  { id: "golis", label: "Golis", deliveryFee: 3 },
-  { id: "26-june", label: "26 June", deliveryFee: 3 },
-  { id: "mohamed-moge", label: "Mohamed Moge", deliveryFee: 4 },
-  { id: "airport", label: "Airport Area", deliveryFee: 4 },
-  { id: "shaab", label: "Sha'ab Area", deliveryFee: 3 },
-  { id: "dabaruq", label: "Dabaruq", deliveryFee: 5 },
-  { id: "other", label: "Other Area", deliveryFee: 5 },
+  { id: "new-hargeisa", label: "New Hargeisa", deliveryFee: 1.5 },
+  { id: "golis", label: "Golis", deliveryFee: 1.5 },
+  { id: "26-june", label: "26 June", deliveryFee: 1.5 },
+  { id: "mohamed-moge", label: "Mohamed Moge", deliveryFee: 1.5 },
+  { id: "airport", label: "Airport Area", deliveryFee: 1.5 },
+  { id: "shaab", label: "Sha'ab Area", deliveryFee: 1.5 },
+  { id: "dabaruq", label: "Dabaruq", deliveryFee: 1.5 },
+  { id: "jig-jiga-yar", label: "Jig Jiga Yar", deliveryFee: 1.5 },
+  { id: "ahmed-dhagah", label: "Ahmed Dhagah", deliveryFee: 1.5 },
+  { id: "ibrahim-kodbuur", label: "Ibrahim Kodbuur", deliveryFee: 1.5 },
+  { id: "mohamed-ali", label: "Mohamed Ali", deliveryFee: 1.5 },
+  { id: "indho-deero", label: "Indho Deero", deliveryFee: 1.5 },
+  { id: "sheikh-nur", label: "Sheikh Nur", deliveryFee: 1.5 },
+  { id: "state-house", label: "State House", deliveryFee: 1.5 },
+  { id: "mothers-and-children", label: "Mothers & Children", deliveryFee: 1.5 },
+  { id: "other", label: "Other Area", deliveryFee: 1.5 },
 ];
 
 export default function CartPage() {

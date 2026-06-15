@@ -8,14 +8,22 @@ import { useLanguage } from "@/components/language-context";
 import { useCartStore } from "@/lib/store";
 
 const hargeisaDistricts = [
-  { id: "new-hargeisa", label: "New Hargeisa", labelSo: "Hargeisa Cusub", deliveryFee: 3 },
-  { id: "golis", label: "Golis", labelSo: "Golis", deliveryFee: 3 },
-  { id: "26-june", label: "26 June", labelSo: "26 Juun", deliveryFee: 3 },
-  { id: "mohamed-moge", label: "Mohamed Moge", labelSo: "Maxamed Mooge", deliveryFee: 4 },
-  { id: "airport", label: "Airport Area", labelSo: "Agaasimada Diyaaradaha", deliveryFee: 4 },
-  { id: "shaab", label: "Sha'ab Area", labelSo: "Sha'ab", deliveryFee: 3 },
-  { id: "dabaruq", label: "Dabaruq", labelSo: "Dabaruq", deliveryFee: 5 },
-  { id: "other", label: "Other Area", labelSo: "Meeso Kale", deliveryFee: 5 },
+  { id: "new-hargeisa", label: "New Hargeisa", labelSo: "Hargeisa Cusub", deliveryFee: 1.5 },
+  { id: "golis", label: "Golis", labelSo: "Golis", deliveryFee: 1.5 },
+  { id: "26-june", label: "26 June", labelSo: "26 Juun", deliveryFee: 1.5 },
+  { id: "mohamed-moge", label: "Mohamed Moge", labelSo: "Maxamed Mooge", deliveryFee: 1.5 },
+  { id: "airport", label: "Airport Area", labelSo: "Agaasimada Diyaaradaha", deliveryFee: 1.5 },
+  { id: "shaab", label: "Sha'ab Area", labelSo: "Sha'ab", deliveryFee: 1.5 },
+  { id: "dabaruq", label: "Dabaruq", labelSo: "Dabaruq", deliveryFee: 1.5 },
+  { id: "jig-jiga-yar", label: "Jig Jiga Yar", labelSo: "Jig Jiga Yar", deliveryFee: 1.5 },
+  { id: "ahmed-dhagah", label: "Ahmed Dhagah", labelSo: "Axmed Dhagax", deliveryFee: 1.5 },
+  { id: "ibrahim-kodbuur", label: "Ibrahim Kodbuur", labelSo: "Ibraahim Kodbuur", deliveryFee: 1.5 },
+  { id: "mohamed-ali", label: "Mohamed Ali", labelSo: "Maxamed Cali", deliveryFee: 1.5 },
+  { id: "indho-deero", label: "Indho Deero", labelSo: "Indho Deero", deliveryFee: 1.5 },
+  { id: "sheikh-nur", label: "Sheikh Nur", labelSo: "Sheekh Nuur", deliveryFee: 1.5 },
+  { id: "state-house", label: "State House", labelSo: "Golaha Dowladda", deliveryFee: 1.5 },
+  { id: "mothers-and-children", label: "Mothers & Children", labelSo: "Hooyooyinka iyo Carruurta", deliveryFee: 1.5 },
+  { id: "other", label: "Other Area", labelSo: "Meeso Kale", deliveryFee: 1.5 },
 ];
 
 interface WhatsAppCheckoutModalProps {
